@@ -9,5 +9,17 @@ const getAllProducts = async () => {
     throw new Error("Error fetching products");
   }
 };
+// get product by id
+const getProductById = async (id) => {
+  try {
+    const product = await Product.findById(id);
+    if (!product) {
+      throw new Error("Product not found");
+    }
+    return product;
+  } catch (error) {
+    throw error;
+  }
+};
 
-module.exports = { getAllProducts };
+module.exports = { getAllProducts, getProductById };

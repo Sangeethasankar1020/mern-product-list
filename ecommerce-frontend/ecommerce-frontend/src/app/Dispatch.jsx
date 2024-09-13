@@ -1,6 +1,6 @@
-// src/app/dispatch.jsx
+import React from "react";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { Provider, useDispatch } from "react-redux";
 import { fetchProducts } from "../features/products/productSlice";
 
 const Dispatch = ({ children }) => {
