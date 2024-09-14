@@ -1,11 +1,10 @@
-// src/components/ProductCard.jsx
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel CSS
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
-  const navigate = useNavigate(); // Hook to navigate programmatically
+  const navigate = useNavigate();
 
   const handleViewDetails = () => {
     navigate(`/product/${product._id}`); // Navigate to product details page

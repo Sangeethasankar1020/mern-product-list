@@ -44,8 +44,6 @@ const ProductDetails = () => {
       <h1 className="text-3xl font-bold">{product.name}</h1>
       <p className="text-lg mt-2">{product.description}</p>
       <p className="text-xl font-semibold mt-4">${product.price}</p>
-
-      {/* Add more details or actions as needed */}
     </div>
   );
 };

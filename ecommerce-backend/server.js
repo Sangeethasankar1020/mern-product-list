@@ -3,6 +3,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const productRoutes = require("./src/routes/productRoutes");
+const authRoutes = require("./src/routes/authRoutes");
 
 // load environment variables
 dotenv.config();
@@ -20,7 +21,7 @@ app.get("/", (req, res) => {
   res.send("im connected through 5000");
 });
 app.use("/api/products", productRoutes);
-
+app.use("/api/auth", authRoutes);
 // mongodb connection
 
 const connectDB = async () => {

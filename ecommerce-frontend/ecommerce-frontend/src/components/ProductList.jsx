@@ -1,4 +1,3 @@
-// src/components/ProductList.jsx
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../features/products/productSlice";
@@ -17,7 +16,6 @@ const ProductList = () => {
   if (status === "loading") return <p>Loading...</p>;
   if (status === "failed") return <p>{error}</p>;
 
-  // Safe check for products array
   if (!products || !Array.isArray(products) || products.length === 0) {
     return <p>No products found.</p>;
   }
